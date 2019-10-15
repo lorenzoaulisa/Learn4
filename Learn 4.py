@@ -5,7 +5,6 @@ import math
 
 print(9801/(2206 * math.sqrt(2)))
 
-
 def archimedes(numSides):
     innerAngleB = 360.0 / numSides
     halfAngleA = innerAngleB / 2
@@ -15,12 +14,11 @@ def archimedes(numSides):
     pi = polygonCircumference / 2
     return pi
 
-
 print(archimedes(8))
 print(archimedes(16))
 
-for sides in range(8, 10000, 8):
+for sides in range(8, 999999, 8):
     print(sides, archimedes(sides))
 
-# experiment with the loop above alongside the actual value of Pi. How many sides does it take to make the two close?
-
+# Q: experiment with the loop above alongside the actual value of Pi. How many sides does it take to make the two close?
+# A: I'm guessing infinitely many
