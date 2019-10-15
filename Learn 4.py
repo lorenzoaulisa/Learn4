@@ -1,4 +1,5 @@
 # Starting off
+
 print(22/7)
 print(355/113)
 import math
@@ -22,3 +23,19 @@ for sides in range(8, 999999, 8):
 
 # Q: experiment with the loop above alongside the actual value of Pi. How many sides does it take to make the two close?
 # A: I'm guessing infinitely many
+
+# Accumulators
+acc = 0
+for x in range(1,6):
+    acc = acc + x
+
+print(acc)
+
+# Commute the sum of the first 100 even numbers
+# Commute the sum of the first 50 odd numbers
+# Commute the average of the first 100 odd numbers
+# write a function that returns the average of the first N numbers, where N is a parameter
+# Write a function called factorial 6that commutes the product of the first N numbers, where N is a parameter
+# Each number in the Fibonacci sequence is the sum of the previous 2 numbers
+# The first two numbers in the sequence are 1 and 1. Commute the 10th Fibonacci number
+# You may assume that N will be graeter or equal to 3.
