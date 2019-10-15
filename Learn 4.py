@@ -26,8 +26,14 @@ for sides in range(8, 999999, 8):
 
 # Accumulators
 acc = 0
-for x in range(1,6):
-    acc = acc + x
+for x in range(1, 101):
+    acc = acc + x * 2
+
+print(acc)
+
+acc = 0
+for x in range(1, 51):
+    acc = acc + x * 2
 
 print(acc)
 
@@ -35,7 +41,7 @@ print(acc)
 # Commute the sum of the first 50 odd numbers
 # Commute the average of the first 100 odd numbers
 # write a function that returns the average of the first N numbers, where N is a parameter
-# Write a function called factorial 6that commutes the product of the first N numbers, where N is a parameter
+# Write a function called factorial that commutes the product of the first N numbers, where N is a parameter
 # Each number in the Fibonacci sequence is the sum of the previous 2 numbers
 # The first two numbers in the sequence are 1 and 1. Commute the 10th Fibonacci number
-# You may assume that N will be graeter or equal to 3.
+# You may assume that N will be greater or equal to 3.
