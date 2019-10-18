@@ -47,6 +47,11 @@ for x in range(1, 200):
         acc = (acc + x)
 
 print(acc/100)
+
+acc = 0
+for x in range(1, 50):
+    acc = (acc + x)
+
 # Commute the sum of the first 100 even numbers
 # Complete
 
@@ -57,7 +62,7 @@ print(acc/100)
 # Complete
 
 # write a function that returns the average of the first N numbers, where N is a parameter
-
+# In progress
 
 # Write a function called factorial that commutes the product of the first N numbers, where N is a parameter
 
@@ -67,6 +72,65 @@ print(acc/100)
 
 # The first two numbers in the sequence are 1 and 1. Commute the 10th Fibonacci number
 
+# Write a function that commutes the Fibonacci number, where N is a parameter
 
 # You may assume that N will be greater or equal to 3.
 
+
+
+# A Monte Carlo simulation
+
+import random
+
+print(random.random())
+
+# Boolean expressions
+# >  greater than
+# >= greater than or equal to
+# < less than
+# <= less than or equal to
+# == the same as [ equal to ]
+# != NOT equal to
+
+CatWeight = 15
+print(CatWeight > 15)
+print(CatWeight >= 15)
+print(CatWeight <= 15)
+print(CatWeight < 15)
+print(CatWeight == 15)
+print(CatWeight != 15)
+
+BigLion = 40
+
+# compound boolean operations
+# and
+# or
+# not
+
+print(CatWeight < 30 and BigLion < 55)
+print(CatWeight < 30 or BigLion < 55)
+print(not BigLion < 9999)
+
+# Decision Making -- Selection statements
+a = 5
+b = 10
+c = 75
+
+if a > b :
+    c = 45
+
+print(c)
+
+if a > b:
+    c = 45
+    if b > c:
+        a = 25
+    else:
+        a = -25
+else:
+    c = 1050
+    if b == a:
+        c = 25
+
+
+print(a, b, c)
