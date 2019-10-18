@@ -15,6 +15,27 @@ def archimedes(numSides):
     pi = polygonCircumference / 2
     return pi
 
+def average(N):
+    avg = 0
+    for x in range(1, N + 1):
+        avg = (avg + x)
+    return avg/N
+
+def factorial(N):
+    fact = 1
+    for x in range(2, N + 1):
+        fact = fact * x
+    return fact
+
+def fibonacci(N):
+    acc0 = 1
+    acc1 = 2
+    for x in range(3, N+1):
+        temp = acc1
+        acc1 = acc0 + acc1  
+        acc0 = temp
+    return(acc1)
+
 print(archimedes(8))
 print(archimedes(16))
 
@@ -22,67 +43,60 @@ for sides in range(8, 999999, 8):
     print(sides, archimedes(sides))
 
 # Q: experiment with the loop above alongside the actual value of Pi. How many sides does it take to make the two close?
-# A: I'm guessing infinitely many
+# A: Pi is an irrational number, it has infinite many digits thus I am guessing infinitely many iterations
 
 # Accumulators
-
 # Commute the sum of the first 100 even numbers
 acc = 0
 for x in range(1, 101):
     acc = acc + x * 2
-
 print(acc)
-
-# Commute the sum of the first 50 odd numbers
-acc = 50
-for x in range(1, 50):
-    acc = acc + x * 2
-
-print(acc)
-
-# Commute the average of the first 100 odd numbers
-acc = 0
-for x in range(1, 200):
-    if x % 2 :
-        acc = (acc + x)
-
-print(acc/100)
-
-acc = 0
-for x in range(1, 50):
-    acc = (acc + x)
-
-# Commute the sum of the first 100 even numbers
 # Complete
 
 # Commute the sum of the first 50 odd numbers
+acc = 0
+for x in range(0, 50):
+    acc = acc + (x * 2 + 1)
+print(acc)
 # Complete
 
 # Commute the average of the first 100 odd numbers
+acc = 0
+for x in range(0, 100):
+    acc = acc + (x * 2 + 1)
+acc = acc / 100
+print(acc)
 # Complete
 
 # write a function that returns the average of the first N numbers, where N is a parameter
-# In progress
+print(average(10))
+# Complete
 
 # Write a function called factorial that commutes the product of the first N numbers, where N is a parameter
-
+print(factorial(5))
+# Complete
 
 # Each number in the Fibonacci sequence is the sum of the previous 2 numbers
-
-
 # The first two numbers in the sequence are 1 and 1. Commute the 10th Fibonacci number
+N = 10
+acc0 = 1
+acc1 = 2
+for x in range(3, N+1):
+  temp = acc1
+  acc1 = acc0 + acc1  
+  acc0 = temp
+print(acc1)  
+# Complete
 
 # Write a function that commutes the Fibonacci number, where N is a parameter
-
 # You may assume that N will be greater or equal to 3.
-
-
+print(fibonacci(7))
+# Complete
 
 # A Monte Carlo simulation
-
 import random
-
 print(random.random())
+# Complete
 
 # Boolean expressions
 # >  greater than
@@ -152,3 +166,4 @@ else:
         else:
             ans = 75
 print(ans)
+# Complete
