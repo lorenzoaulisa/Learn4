@@ -8,7 +8,7 @@ import math
 # Program will calculate and print some numbers even closer to the value of pi
 print(9801/(2206 * math.sqrt(2)))
 
-# Program will define archimedes
+# Function will return Archimedes' formula for evaluating pi
 def archimedes(numSides):
     innerAngleB = 360.0 / numSides
     halfAngleA = innerAngleB / 2
@@ -17,21 +17,25 @@ def archimedes(numSides):
     polygonCircumference = numSides * sideS
     pi = polygonCircumference / 2
     return pi
+# end of function
 
-# Program will define average
+# Function will return the average of the first N numbers
 def average(N):
     avg = 0
     for x in range(1, N + 1):
         avg = (avg + x)
     return avg/N
+# end of function
 
-# Program w
+# Function will return N! 
 def factorial(N):
     fact = 1
     for x in range(2, N + 1):
         fact = fact * x
     return fact
+# end of function
 
+# Function will return the Nth term of the Fibonacci series
 def fibonacci(N):
     acc0 = 1
     acc1 = 2
@@ -40,15 +44,21 @@ def fibonacci(N):
         acc1 = acc0 + acc1  
         acc0 = temp
     return(acc1)
+# end of function
 
+
+# test archimides function for 8 and 16 sides
 print(archimedes(8))
 print(archimedes(16))
 
+# Print archimides function from 8 and 999999 sides
 for sides in range(8, 999999, 8):
     print(sides, archimedes(sides))
 
 # Q: experiment with the loop above alongside the actual value of Pi. How many sides does it take to make the two close?
 # A: Pi is an irrational number, it has infinite many digits thus I am guessing infinitely many iterations
+# Complete
+
 
 # Accumulators
 # Commute the sum of the first 100 even numbers
@@ -129,6 +139,7 @@ BigLion = 40
 print(CatWeight < 30 and BigLion < 55)
 print(CatWeight < 30 or BigLion < 55)
 print(not BigLion < 9999)
+# complete
 
 # Decision Making -- Selection statements
 a = 5
@@ -173,6 +184,8 @@ else:
 print(ans)
 # Complete
 
+
+# Function will return pi using Montecarlo algorithm
 def montePi(numDarts):
 
     inCircle = 0
@@ -188,15 +201,18 @@ def montePi(numDarts):
 
     pi = inCircle / numDarts * 4
     return pi
+# end of function
 
+# Test montePi function
 print(montePi(10000))
 
-import turtle
 
+# Function will show how Montecarlo algorithm works
+import turtle
 def showMontePi(numDarts):
     scn = turtle.Screen()
     t = turtle.Turtle()
-
+    t.speed(10)
     scn.setworldcoordinates(-2, -2, 2, 2)
 
     t.penup()
@@ -213,8 +229,8 @@ def showMontePi(numDarts):
     t.penup()
 
     for i in range(numDarts):
-        x = random.random()
-        y = random.random()
+        x = -1. + 2. * random.random()
+        y = -1. + 2. * random.random()
 
         distance = math.sqrt(x**2 + y**2)
 
@@ -229,11 +245,14 @@ def showMontePi(numDarts):
         t.dot()
 
     pi = inCircle / numDarts * 4
+    print(pi)
     scn.exitonclick()
     return pi
 
+# Test showMontePi function
 showMontePi(1000)
 
 # Your Task:
 # Modify the simulation to plot points in the entire circle. You will have to adjustm the calculated value of pi
 # accordingly.
+# complete
