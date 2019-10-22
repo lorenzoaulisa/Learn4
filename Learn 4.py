@@ -235,4 +235,5 @@ def showMontePi(numDarts):
 showMontePi(1000)
 
 # Your Task:
-# Modify the simulation to plot points in the entire circle. You will have to adjustm the calculated value of pi accordingly.
+# Modify the simulation to plot points in the entire circle. You will have to adjustm the calculated value of pi
+# accordingly.
