@@ -1,11 +1,14 @@
 # Starting off
 
+# Program will calculate and print some numbers close to the value of pi as well as import math
 print(22/7)
 print(355/113)
 import math
 
+# Program will calculate and print some numbers even closer to the value of pi
 print(9801/(2206 * math.sqrt(2)))
 
+# Program will define archimedes
 def archimedes(numSides):
     innerAngleB = 360.0 / numSides
     halfAngleA = innerAngleB / 2
@@ -15,12 +18,14 @@ def archimedes(numSides):
     pi = polygonCircumference / 2
     return pi
 
+# Program will define average
 def average(N):
     avg = 0
     for x in range(1, N + 1):
         avg = (avg + x)
     return avg/N
 
+# Program w
 def factorial(N):
     fact = 1
     for x in range(2, N + 1):
@@ -167,3 +172,67 @@ else:
             ans = 75
 print(ans)
 # Complete
+
+def montePi(numDarts):
+
+    inCircle = 0
+
+    for i in range(numDarts):
+        x = random.random()
+        y = random.random()
+
+        distance = math.sqrt(x**2 + y**2)
+
+        if distance <= 1:
+            inCircle = inCircle + 1
+
+    pi = inCircle / numDarts * 4
+    return pi
+
+print(montePi(10000))
+
+import turtle
+
+def showMontePi(numDarts):
+    scn = turtle.Screen()
+    t = turtle.Turtle()
+
+    scn.setworldcoordinates(-2, -2, 2, 2)
+
+    t.penup()
+    t.goto(-1, 0)
+    t.pendown()
+    t.goto(1, 0)
+
+    t.penup()
+    t.goto(0, 1)
+    t.pendown()
+    t.goto(0, -1)
+
+    inCircle = 0
+    t.penup()
+
+    for i in range(numDarts):
+        x = random.random()
+        y = random.random()
+
+        distance = math.sqrt(x**2 + y**2)
+
+        t.goto(x,y)
+
+        if distance <= 1:
+            inCircle = inCircle + 1
+            t.color("blue")
+        else:
+            t.color("red")
+
+        t.dot()
+
+    pi = inCircle / numDarts * 4
+    scn.exitonclick()
+    return pi
+
+showMontePi(1000)
+
+# Your Task:
+# Modify the simulation to plot points in the entire circle. You will have to adjustm the calculated value of pi accordingly.
